@@ -20,7 +20,7 @@ def bulk_indexing():
     es = Elasticsearch()
     bulk(client=es, actions=(hc.indexing() for hc in models.HotChocStore.objects.all().iterator()))
 
-connections.create_connection()
+connections.create_connection(hosts=["10.24.152.187"])
 
 class HotChocStoreIndex(Document):
     location = Text()
@@ -29,6 +29,5 @@ class HotChocStoreIndex(Document):
     name = Text()
     description = Text()
 
-    class Meta:
-        index = 'hotchocstore-index'
+    class Index:
         name = 'hotchocstore-index'
