@@ -32,7 +32,7 @@ So we have model objects to index!
     8. Put this in admin.py (same level as models.py)
 
     from django.contrib import admin
-    from .models import BlogPost
+    from .models import HotChocStore
 
     admin.site.register(HotChocStore)
 
