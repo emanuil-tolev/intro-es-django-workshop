@@ -92,3 +92,5 @@ So we have model objects to index!
 
     from elasticsearch_dsl import Search
     s = Search().query('query_string', query='the best')  # should get 1 result
+    r = s.execute()
+    r.to_dict()
