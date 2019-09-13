@@ -15,6 +15,10 @@ Either way, you should see a JSON response full of version numbers.
 
     # other platforms https://www.elastic.co/downloads/past-releases/elasticsearch-6-5-4
 
+    Install java and run Elasticsearch.
+    cd elasticsearch-6.5.4
+    ./bin/elasticsearch
+
 ## Fill it with data.
 
 ### Get the app started
