@@ -26,7 +26,7 @@ So we have model objects to index!
     3. django-admin startproject hotchocproj
     4. cd hotchocproj
     5. python manage.py startapp hotchoc
-    6. add 'myapp' to INSTALLED_APPS in settings.py (see hotchoc_final/hotchoc/settings.py if in doubt)
+    6. add 'hotchoc' to INSTALLED_APPS in settings.py (see hotchoc_final/hotchoc/settings.py if in doubt)
     7. Next, copy over hotchoc_final/hotchoc/models.py to your hotchocproj/hotchoc/models.py. We'll take a look at the code together.
     8. Put this in admin.py (same level as models.py)
 
