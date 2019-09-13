@@ -86,4 +86,5 @@ So we have model objects to index!
 
     7. We've done indexing, searching with a filter and an aggregation. Let's do a full-text search.
 
+    from elasticsearch_dsl import Search
     s = Search().query('query_string', query='the best')  # should get 1 result
