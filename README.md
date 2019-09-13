@@ -44,6 +44,7 @@ So we have model objects to index!
     5. Note how models.py has an indexing method too to complement the bulk indexing
     6. Data model in place, mapping to index in place, we can finally get data in!
     7. copy over the hotchoc_final/hotchoc/management directory into your hotchocproj/hotchoc/ app.
+    8. copy hotchoc_final/hotchoc/agg_setup.py to your hotchocproj/hotchoc/ app.
 
     python manage.py gendata
 
