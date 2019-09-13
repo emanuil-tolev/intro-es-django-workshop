@@ -27,7 +27,7 @@ So we have model objects to index!
     4. cd hotchocproj
     5. python manage.py startapp hotchoc
     6. add 'myapp' to INSTALLED_APPS in settings.py (see hotchoc_final/hotchoc/settings.py if in doubt)
-    7. Next, copy over hotchoc_final/models.py to your hotchocproj/hotchoc/models.py. We'll take a look at the code together.
+    7. Next, copy over hotchoc_final/hotchoc/models.py to your hotchocproj/hotchoc/models.py. We'll take a look at the code together.
     8. Put this in admin.py (same level as models.py)
 
     from django.contrib import admin
@@ -35,15 +35,15 @@ So we have model objects to index!
 
     admin.site.register(HotChocStore)
 
-    9. python manage.py makemigrations
-    10. python manage.py migrate
-    11. python manage.py createsuperuser
-
 ### Bulk index
 
     1. Copy over search.py from the hotchoc_final directory to your hotchocproj/hotchoc/. We'll stop and have a look at the file.
-    2. Note how models.py has an indexing method too to complement the bulk indexing
-    3. Data model in place, mapping to index in place, we can finally get data in!
+    2. python manage.py makemigrations
+    3. python manage.py migrate
+    4. python manage.py createsuperuser
+    5. Note how models.py has an indexing method too to complement the bulk indexing
+    6. Data model in place, mapping to index in place, we can finally get data in!
+    7. copy over the hotchoc_final/hotchoc/management directory into your hotchocproj/hotchoc/ app.
 
     python manage.py gendata
 
