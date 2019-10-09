@@ -10,14 +10,21 @@ Download Elasticsearch 6.5.4 and run it locally, then connect to localhost:9200.
 
 Either way, you should see a JSON response full of version numbers.
 
-    # Linux and Mac OS
-    wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.tar.gz
+**Linux and Mac OS**
 
-    # other platforms https://www.elastic.co/downloads/past-releases/elasticsearch-6-5-4
+```
+$ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.tar.gz
+```
 
-    Install java and run Elasticsearch.
-    cd elasticsearch-6.5.4
-    ./bin/elasticsearch
+for other platforms download elastic from: https://www.elastic.co/downloads/past-releases/elasticsearch-6-5-4.
+
+
+Install java and run Elasticsearch.
+
+```
+$ cd elasticsearch-6.5.4
+$ ./bin/elasticsearch
+```
 
 ## Fill it with data.
 
@@ -25,19 +32,37 @@ Either way, you should see a JSON response full of version numbers.
 
 So we have model objects to index!
 
-    1. create a virtual environment and activate it
-    2. pip install -r hotchoc_final/requirements.txt
-    3. django-admin startproject hotchocproj
-    4. cd hotchocproj
-    5. python manage.py startapp hotchoc
-    6. add 'hotchoc' to INSTALLED_APPS in settings.py (see hotchoc_final/hotchoc/settings.py if in doubt)
-    7. Next, copy over hotchoc_final/hotchoc/models.py to your hotchocproj/hotchoc/models.py. We'll take a look at the code together.
-    8. Put this in admin.py (same level as models.py)
+**Step 1:** Create a virtual environment and activate it.
 
-    from django.contrib import admin
-    from .models import HotChocStore
+**Step 2:** Install requirements.
+```
+$ pip install -r hotchoc_final/requirements.txt
+```
 
-    admin.site.register(HotChocStore)
+**Step 3:** Create a project called `hotchocproj`.
+```
+$ django-admin startproject hotchocproj
+```
+
+**Step 4:** Move to the folder `hotchocproj`.
+```
+$ cd hotchocproj
+```
+**Step 5:** create project `hotchocproj`.
+```
+$ python manage.py startapp hotchoc
+```
+**Step 6:** add `hotchoc` to `INSTALLED_APPS` in `hotchocproj/settings.py` (see hotchoc_final/hotchoc/settings.py if in doubt).
+
+**Step 7:** Copy over `hotchoc_final/hotchoc/models.py `to your `hotchocproj/hotchoc/models.py`. We'll take a look at the code together.
+
+**Step 8:** Put this in `admin.py` (same level as `models.py`):
+```python
+from django.contrib import admin
+from .models import HotChocStore
+
+admin.site.register(HotChocStore)
+```
 
 ### Bulk index
 
